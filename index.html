@@ -1,0 +1,878 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney+ Hotstar</title>
+
+    <!-- Icon Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" href="estilos/styles.css"/>
+    <script src="script.js"></script>
+    <!-- --------------- -->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <!-- ------------ -->
+</head>
+<body>
+   <!-- Loader -->
+   <div class="loader-wrapper loader--initial">
+    <div class="loader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+        </svg>
+    </div>
+</div>
+<!-- End of Loader -->
+
+<!-- Start Top Nav  -->
+<nav class="navigation">
+    <div class="navigation__items">
+
+        <div class="humburger-menu">
+            <div class="humburger-menu__line"></div>
+            <div class="humburger-menu__line"></div>
+            <div class="humburger-menu__line"></div>
+        </div>
+        <div class="navigation__logo-wrapper">
+            <img class="navigation__logo" src="imagenes/logo.png" alt="logo">
+        </div>
+        <div class="navigation__btn">
+            <a href="#" class="navigation__btn-subscribe flex-align">Juegos html5<i class=""></i></a>
+        </div>
+    </div>
+    <div class="navigation__items">
+        <div class="navigation__search">
+            
+        </div>
+    </div>
+</nav>
+    <!-- End Top Nav  -->
+
+    <!-- Left SideBar  -->
+    <div class="sidebar">
+
+        <div class="sidebar-login" onclick="openPage(0)">
+
+            <div class="sidebar-login__item flex-align">
+                <img src="imagenes/usuario.svg" alt="user_icon">
+
+                <div class="sidebar-login__item__wrapper">
+                    <div class="sidebar-login__item__text">Log in</div>
+                    <div class="sidebar-login__item__desc">For a better experience</div>
+                </div>
+
+            </div>
+
+            <div class="sidebar-login__item">
+                <i class="ri-arrow-right-s-line"></i>
+            </div>
+
+        </div>
+
+        <ul class="sidebar__list">
+
+            <li class="sidebar__list__item flex" onclick="openPage(1, 'download')">
+
+                <img src="imagenes/accion.jpeg" alt="accion">
+
+                <div>
+                    <div class="sidebar__list__text">
+                        accion
+                    </div>
+                    <div class="sidebar__list__desc">
+                       juegos de accion
+                    </div>
+                </div>
+
+            </li>
+
+            <li class="sidebar__list__item flex not-kids-mode" onclick="openPage(1, 'watchlist')">
+
+                <img src="imagenes/aventura.jpeg" alt="aventura">
+
+                <div>
+                    <div class="sidebar__list__text">
+                       aventura
+                    </div>
+                    <div class="sidebar__list__desc">
+                        juego de aventura
+                    </div>
+                </div>
+
+            </li>
+
+            <li class="sidebar__list__item flex not-kids-mode" onclick="openPage(1, 'watchlist')">
+
+                <img src="imagenes/carreras.jpeg" alt="carreras">
+
+                <div>
+                    <div class="sidebar__list__text">
+                       carros
+                    </div>
+                    <div class="sidebar__list__desc">
+                        juego de carreras
+                    </div>
+                </div>
+
+            </li>
+
+            <li class="sidebar__list__item flex not-kids-mode" onclick="openPage(2)">
+
+                <img src="imagenes/chicas.jpeg" alt="chicas">
+
+                <div>
+                    <div class="sidebar__list__text">
+                        chicas
+                    </div>
+                    <div class="sidebar__list__desc">
+                        juegos para niñas
+                    </div>
+                </div>
+
+            </li>
+
+
+
+            <li class="sidebar__list__item flex not-kids-mode" onclick="openMoviesPremium('Movies')">
+
+                <img src="imagenes/clasicos.jpeg" alt="clasicos">
+
+                <div class="sidebar__list__text">
+                    clasicos
+                </div>
+
+            </li>
+
+
+            <li class="sidebar__list__item flex not-kids-mode" onclick="openMoviesPremium('Premium')">
+
+                <img src="imagenes/click.jpeg" alt="click">
+
+                <div class="sidebar__list__text">
+                    click
+                </div>
+
+            </li>
+
+            <li class="sidebar__list__item flex not-kids-mode" onclick="openPage(7)">
+
+                <img src="imagenes/deportes.jpeg" alt="deportes">
+
+                <div class="sidebar__list__text">
+                    deportes
+                </div>
+
+            </li>
+
+            <li class="sidebar__list__item flex not-kids-mode" onclick="openChannelLangGenrePage('Channels')">
+
+                <img src="imagenes/io.jpeg" alt=".io">
+
+                <div class="sidebar__list__text">
+                   .io
+                </div>
+
+            </li>
+
+            <li class="sidebar__list__item flex not-kids-mode" onclick="openChannelLangGenrePage('Channels')">
+
+                <img src="imagenes/puzzle.jpeg" alt="puzzle">
+
+                <div class="sidebar__list__text">
+                   puzzle
+                </div>
+
+            </li>
+
+            <li class="sidebar__list__item flex not-kids-mode" onclick="openChannelLangGenrePage('Languages')">
+
+                <img src="imagenes/recientes.jpeg" alt="recientes">
+
+                <div class="sidebar__list__text">
+                    recientes
+                </div>
+
+            </li>
+
+            <li class="sidebar__list__item flex not-kids-mode" onclick="openChannelLangGenrePage('Genres')">
+
+                <img src="imagenes/tiros.jpeg" alt="tiros">
+
+                <div class="sidebar__list__text">
+                    tiros
+                </div>
+
+            </li>
+
+            <div class="sidebar__list__line not-kids-mode"></div>
+
+            <div class="sidebar__list__line"></div>
+
+            <li class="sidebar__list__item flex">
+                <div class="sidebar__list__privacy-box">
+                    <span class="privacy">Privacy Policy</span>
+                    <span class="dot">.</span>
+                    <span class="toc">T&C</span>
+                    <div class="version">v11.0.9.833</div>
+                </div>
+
+            </li>
+
+        </ul>
+
+    </div>
+    <!-- End of Left SideBar -->
+
+     <!-- Menu  Bottom Nav  -->
+     <div class="menu-bottom">
+        <div class="menu-bottom__items menu-active" onclick="changeBottomTab(this, 'home')">
+            <img src="imagenes/home.jpeg" alt="Home" class="menu-bottom__icon">
+            <span>Home</span>
+        </div>
+        <div class="menu-bottom__items" onclick="changeBottomTab(this, 'tv')">
+            <img src="imagenes/recientes.jpeg" alt="recientes" class="menu-bottom__icon">
+            <span>recientes</span>
+        </div>
+        <div class="menu-bottom__items" onclick="changeBottomTab(this, 'disney')">
+            <img src="imagenes/pacman.jpeg" alt="pacman" class="menu-bottom__disney-icon">
+
+        </div>
+        <div class="menu-bottom__items" onclick="changeBottomTab(this, 'sport')">
+            <img src="imagenes/accion.jpeg" alt="accion" class="menu-bottom__icon">
+            <span>accion</span>
+        </div>
+        <div class="menu-bottom__items" onclick="changeBottomTab(this, 'news')">
+            <img src="imagenes/aventura.jpeg" alt="aventura" class="menu-bottom__icon">
+            <span>aventura</span>
+        </div>
+    </div>
+    <!-- End Bottom Menu -->
+
+    <!-- Search page start -->
+    <section class="search-page page--down--close">
+        <div class="search-page__form">
+            <div class="search-page__btn-back" onclick="closePage(3)">
+                <i class="ri-arrow-left-line search-page__btn-back-icon"></i>
+            </div>
+
+            <input type="text" placeholder="Search" class="search-page__input" />
+
+            <div class="search-page__mice">
+                <i class="fa fa-microphone search-page__mice-icon" aria-hidden="true"></i>
+            </div>
+        </div>
+
+        <div class="search-page__popular">
+            <p class="search-page__popular__title">Popular</hp>
+            <div class="search-page__popular__items">
+                <div class="search-page__popular__img-wrapper">
+                    <img class="search-page__popular__img" src="https://aakaanksha-disney-hotstar.netlify.app/images/search/karan.webp" alt="Coffee with Karan">
+                </div>
+                <div class="search-page__popular__show-name">
+                    <p>Coffee With Karan</p>
+                </div>
+            </div>
+            <div class="search-page__popular__items">
+                <div class="search-page__popular__img-wrapper">
+                    <img class="search-page__popular__img" src="https://aakaanksha-disney-hotstar.netlify.app/images/search/Yes-rishta.webp" alt="Yeh Rishta">
+                </div>
+                <div class="search-page__popular__show-name">
+                    <p>Yeh Rishta</p>
+                </div>
+            </div>
+
+            <div class="search-page__popular__items">
+                <div class="search-page__popular__img-wrapper">
+                    <img class="search-page__popular__img" src="https://aakaanksha-disney-hotstar.netlify.app/images/search/sofia-the-first.webp"
+                        alt="Sofia The First">
+                </div>
+                <div class="search-page__popular__show-name">
+                    <p>Sofia The First</p>
+                </div>
+            </div>
+
+            <div class="search-page__popular__items">
+                <div class="search-page__popular__img-wrapper">
+                    <img class="search-page__popular__img" src="https://aakaanksha-disney-hotstar.netlify.app/images/search/belly-burn.webp" alt="Belly Burn">
+                </div>
+                <div class="search-page__popular__show-name">
+                    <p>Belly Burn</p>
+                </div>
+            </div>
+            <div class="search-page__popular__items">
+                <div class="search-page__popular__img-wrapper">
+                    <img class="search-page__popular__img" src="https://aakaanksha-disney-hotstar.netlify.app/images/search/Anupaama.webp" alt="Anupamaa">
+                </div>
+                <div class="search-page__popular__show-name">
+                    <p>Anupamaa</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Search page end -->
+
+    <!-- Home Tab Started -->
+    <section class="home tab">
+        <!-- Injecting Data From JavaScript -->
+    </section>
+    <!-- End of Home Tab -->
+
+    <!-- Tv Tab Started -->
+    <section class="tv tab tab-inactive">
+        <!-- Injecting Data From JavaScript -->
+    </section>
+    <!-- End of Tv Tab -->
+
+    <!-- Disney Tab Started -->
+    <section class="disney tab tab-inactive">
+        <!-- Injecting Data From JavaScript -->
+    </section>
+    <!-- End of Disney Tab -->
+
+    <!-- Sport Tab Started -->
+    <section class="sport tab tab-inactive">
+        <!-- Injecting Data From JavaScript -->
+    </section>
+    <!-- End of Sport Tab -->
+
+    <!-- News Tab Started -->
+    <section class="news tab tab-inactive">
+
+        <div class="home__ads">
+            <div class="home__ads__image-wrapper">
+                <img class="home__ads__img" src="https://aakaanksha-disney-hotstar.netlify.app/images/ads_images/ads-2.webp" alt="ads">
+            </div>
+            <div class="home__ads__bottom mt-1">
+                <div class="flex">
+                    <img src="https://aakaanksha-disney-hotstar.netlify.app/images/ads_images/ad-icon.webp" class="home__ads__icon" />
+                    <p class="home__ads__text">
+                        <span class="home__ads__text--1">
+                            <span class="home__ads__text--ad">Ad</span>
+                            <span>Dream11</span>
+                        </span>
+                        <span class="home__ads__text--2">Join 9 Crore+ Users</span>
+                    </p>
+                </div>
+                <div class="home__ads__right">
+                    <a href="https://www.dream11.com/affiliate/cricket/android-ipl-gp20-disc-up?af_viewthrough_lookback=1d&af_additionalpostback=1&pid=hotstar_int&is_retargeting=true&af_click_lookback=30d&af_adset=redirectUrl_https://www.dream11.com/referral?referralCode=PLAY100&af_ad=20201005ban_1032x444_03&idfa=8f400324-7a7e-4e81-a815-72abd19b85d8&advertising_id=8f400324-7a7e-4e81-a815-72abd19b85d8&c=home"
+                        class="btn home__ads__btn">Play Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="news__slider-wrappaer">
+
+            <div class="slider__top-wrapper mt-1">
+                <h1 class="slider__heading mb-1">Live News</h1>
+                <i class="ri-arrow-right-s-line slider__btn-spand"></i>
+            </div>
+
+            <div class="news__slider mt">
+
+                <div class="news__slider__items">
+                    <img src="https://aakaanksha-disney-hotstar.netlify.app/images/news/news-1.jpg" alt="news 1 ">
+                </div>
+                <div class="news__slider__items">
+                    <img src="https://aakaanksha-disney-hotstar.netlify.app/images/news/news-2.jpg" alt="news 1 ">
+                </div>
+                <div class="news__slider__items">
+                    <img src="https://aakaanksha-disney-hotstar.netlify.app/images/news/news-3.jpg" alt="news 1 ">
+                </div>
+                <div class="news__slider__items">
+                    <img src="https://aakaanksha-disney-hotstar.netlify.app/images/news/news-4.jpg" alt="news 1 ">
+                </div>
+                <div class="news__slider__items">
+                    <img src="https://aakaanksha-disney-hotstar.netlify.app/images/news/news-5.jpg" alt="news 1">
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <h1 class="news__headlines-heading">Headlines</h1>
+
+        <div class="news__headlines">
+
+            <div class="news__headlines-img-wrapper">
+                <img src="https://aakaanksha-disney-hotstar.netlify.app/images/news/new-cover.jpg" alt="">
+            </div>
+            <p class="news__headlines__top-right-corner-text"> 2 min</p>
+
+            <i class="ri-play-fill news__bottom-left-corner-text"></i>
+
+        </div>
+        <div class="news__bottom-text-wrapper">
+            <h1>Sushant Sing Rajput's sisters seek quashing of FIR filed against them by Rhea</h1>
+            <div class="flex-align">
+                <div class="news__channel-logo">
+                    <img src="https://aakaanksha-disney-hotstar.netlify.app/images/news/news-logo.jpg" alt="">
+                </div>
+                <div>
+                    <p class="news__channel-name"> India Today </p>
+                    <p class="news__time"> 24h ago </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="news__headlines">
+
+            <div class="news__headlines-img-wrapper">
+                <img src="https://aakaanksha-disney-hotstar.netlify.app/images/news/new-cover.jpg" alt="">
+            </div>
+            <p class="news__headlines__top-right-corner-text"> 4 min</p>
+
+            <i class="ri-play-fill news__bottom-left-corner-text"></i>
+
+        </div>
+        <div class="news__bottom-text-wrapper">
+            <h1>Sushant Sing Rajput's sisters seek quashing of FIR filed against them by Rhea</h1>
+            <div class="flex-align">
+                <div class="news__channel-logo">
+                    <img src="https://aakaanksha-disney-hotstar.netlify.app/images/news/news-logo.jpg" alt="">
+                </div>
+                <div>
+                    <p class="news__channel-name"> India Today </p>
+                    <p class="news__time"> 24h ago </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="news__headlines">
+
+            <div class="news__headlines-img-wrapper">
+                <img src="https://aakaanksha-disney-hotstar.netlify.app/images/news/new-cover.jpg" alt="">
+            </div>
+            <p class="news__headlines__top-right-corner-text"> 6 min</p>
+
+            <i class="ri-play-fill news__bottom-left-corner-text"></i>
+
+        </div>
+        <div class="news__bottom-text-wrapper">
+            <h1>Sushant Sing Rajput's sisters seek quashing of FIR filed against them by Rhea</h1>
+            <div class="flex-align">
+                <div class="news__channel-logo">
+                    <img src="https://aakaanksha-disney-hotstar.netlify.app/images/news/news-logo.jpg" alt="">
+                </div>
+                <div>
+                    <p class="news__channel-name"> India Today </p>
+                    <p class="news__time"> 24h ago </p>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <!-- End of Sport Tab -->
+
+    <!-- Movies/Premium Page -->
+    <section class="movies-premium-page page--down--close">
+
+        <div class="movies-premium-page__top flex-align flex-between">
+
+            <div>
+                <div class="flex-align">
+                    <div class="movies-premium-page__btn-back" onclick="closePage(6)">
+                        <i class="ri-arrow-left-line"></i>
+                    </div>
+                    <div class="movies-premium-page__title">Movies</div>
+                </div>
+            </div>
+
+            <div class="navigation__search">
+                <i class="ri-search-line"></i>
+            </div>
+
+        </div>
+
+        <div class="movies-premium-page__main-container">
+            <!-- Injecting Data From JavaScript -->
+        </div>
+    </section>
+    <!-- Movies/premium Page -->
+
+    <!--- Trending Start-->
+    <div class="trending-page page--down--close">
+
+        <div class="trending-page__top flex-align flex-between">
+
+            <div>
+                <div class="flex-align">
+                    <div class="trending-page__btn-back" onclick="closePage(7)">
+                        <i class="ri-arrow-left-line"></i>
+                    </div>
+                    <div class="trending-page__title">Trending</div>
+                </div>
+            </div>
+
+            <div class="navigation__search">
+                <i class="ri-search-line"></i>
+            </div>
+
+        </div>
+
+        <div class="trending-page__content-wrapper">
+            <div class="trending-page__logo-wrapper flex">
+                <img class="trending-page__logo" src="https://aakaanksha-disney-hotstar.netlify.app/images/disney-logo.jpg" alt="logo">
+                <div class="flex-column">
+                    <p class="trending-page__company-name">Disney</p>
+                    <p class="trending-page__category">
+                        <span class="trending-page__category--circle">Drama</span>
+                        <span class="trending-page__category">2019</span>
+                    </p>
+                </div>
+            </div>
+            <div class="trending-page__full-image-wrapper">
+                <img class="trending-page__full-image" src="https://aakaanksha-disney-hotstar.netlify.app/images/home/ads.jpg" alt="dp">
+            </div>
+            <p class="trending-page__bottom-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor cumque
+                eaque numquam neque perspiciatis sint at? </p>
+        </div>
+
+        <div class="trending-page__content-wrapper">
+            <div class="trending-page__logo-wrapper flex">
+                <img class="trending-page__logo" src="https://aakaanksha-disney-hotstar.netlify.app/images/disney-logo.jpg" alt="logo">
+                <div class="flex-column">
+                    <p class="trending-page__company-name">Disney</p>
+                    <p class="trending-page__category">
+                        <span class="trending-page__category--circle">Drama</span>
+                        <span class="trending-page__category">2019</span>
+                    </p>
+                </div>
+            </div>
+            <div class="trending-page__full-image-wrapper">
+                <img class="trending-page__full-image" src="https://aakaanksha-disney-hotstar.netlify.app/images/home/ads.jpg" alt="dp">
+            </div>
+            <p class="trending-page__bottom-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor cumque
+                eaque numquam neque perspiciatis sint at? </p>
+        </div>
+
+        <div class="trending-page__content-wrapper">
+            <div class="trending-page__logo-wrapper flex">
+                <img class="trending-page__logo" src="https://aakaanksha-disney-hotstar.netlify.app/images/disney-logo.jpg" alt="logo">
+                <div class="flex-column">
+                    <p class="trending-page__company-name">Disney</p>
+                    <p class="trending-page__category">
+                        <span class="trending-page__category--circle">Drama</span>
+                        <span class="trending-page__category">2019</span>
+                    </p>
+                </div>
+            </div>
+            <div class="trending-page__full-image-wrapper">
+                <img class="trending-page__full-image" src="https://aakaanksha-disney-hotstar.netlify.app/images/home/ads.jpg" alt="dp">
+            </div>
+            <p class="trending-page__bottom-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor cumque
+                eaque numquam neque perspiciatis sint at? </p>
+        </div>
+
+        <div class="trending-page__content-wrapper">
+            <div class="trending-page__logo-wrapper flex">
+                <img class="trending-page__logo" src="https://aakaanksha-disney-hotstar.netlify.app/images/disney-logo.jpg" alt="logo">
+                <div class="flex-column">
+                    <p class="trending-page__company-name">Disney</p>
+                    <p class="trending-page__category">
+                        <span class="trending-page__category--circle">Drama</span>
+                        <span class="trending-page__category">2019</span>
+                    </p>
+                </div>
+            </div>
+            <div class="trending-page__full-image-wrapper">
+                <img class="trending-page__full-image" src="https://aakaanksha-disney-hotstar.netlify.app/images/home/ads.jpg" alt="dp">
+            </div>
+            <p class="trending-page__bottom-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor cumque
+                eaque numquam neque perspiciatis sint at? </p>
+        </div>
+
+    </div>
+    <!-- End of Trending Start -->
+
+    <!-- Download/Watchlist page starts -->
+    <section class="common-page page--down--close">
+
+        <div class="common-page__top flex-align">
+            <div class="common-page__btn-back" onclick="closePage(1)">
+                <i class="ri-arrow-left-line"></i>
+            </div>
+            <div class="common-page__title"></div>
+        </div>
+
+        <div class="common-page__container">
+            <div class="common-page__box-shadow">
+                <img src="https://aakaanksha-disney-hotstar.netlify.app/images/pages/download.jpg" alt="pages icon">
+            </div>
+            <div class="common-page__text"></div>
+        </div>
+
+    </section>
+    <!-- Download/Watchlist page ends -->
+
+    <!-- Login page start -->
+  
+    <!-- Login page ends -->
+
+    <!-- Prizes page starts -->
+    <section class="prizes-page page--down--close">
+
+        <div class="prizes-page__main-contents">
+            <div class="prizes-page__container">
+                <div class="prizes-page__close flex" onclick="closePage(2)">
+                    <i class="ri-close-fill"></i>
+                </div>
+
+                <div class="prizes-page__title">My Prizes</div>
+                <div class="prizes-page__text">You've yet to win your prize. Play Watch'NPlay<br />with any live match
+                    to win awesome prizes!</div>
+            </div>
+
+            <img class="prizes-page__icon" src="https://aakaanksha-disney-hotstar.netlify.app/images/pages/prizes.jpg" alt="prizes-icon"></img>
+        </div>
+
+    </section>
+    <!-- Prizes page starts ends -->
+
+    <!-- Start Screen -->
+    <div class="start-screen">
+        <div class="start-screen__svg-wrapper">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="115" height="35" viewBox="0 0 65 35">
+                <defs>
+                    <radialGradient id="prefix__a" cx="98.305%" cy="99.794%" r="263.393%" fx="98.305%" fy="99.794%">
+                        
+                    </radialGradient> 
+                </defs>                
+            </svg>
+            <div class="pacman">
+                <div class="pacman-top"></div>
+                <div class="pacman-bottom"></div>
+            <div class="start-screen__light-effect"></div>
+        </div>
+        <img class="start-screen__logo" src="imagenes/TITULO.png" alt="logo">
+    </div>
+    <!-- End of Start Screen -->
+
+    <!-- Template page -->
+    <section class="template-page page--down--close">
+
+        <div class="template-page__top flex-align flex-between">
+
+            <div>
+                <div class="flex-align">
+                    <div class="template-page__btn-back" onclick="closePage(4)"><i class="ri-arrow-left-line"></i></div>
+                    <div class="template-page__title">Black Panther</div>
+                </div>
+            </div>
+
+            <div class="navigation__search">
+                <i class="ri-search-line"></i>
+            </div>
+
+        </div>
+
+        <div class="template-page__cover">
+            <div class="template-page__video-wrapper">
+                <img class="template-page__cover-image" src="https://aakaanksha-disney-hotstar.netlify.app/" alt="cover">
+                <div class="template-page__overlay"></div>
+            </div>
+
+            <div class="template-page__flex-wrapper">
+                <div class="flex-between">
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="flex-between">
+                    <div class="flex-align">
+                        <span><i class="ri-play-fill"></i></span>
+                        <div class="template-page__bottom-text">
+                            <span class="template-page__premium-btn"></span>
+                            <span class="template-page__watch-movie">Watch Movie</span>
+                            <span class="template-page__time">2 hr 15 min</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="template-page__languages">
+            <div class="template-page__items">
+                <p class="template-page__color-text">P</p>
+            </div>
+            <div class="template-page__items">
+                <p class="template-page__active-lang">English</p>
+            </div>
+            <div class="template-page__items">
+                <p class="template-page__color-text">V</p>
+            </div>
+            <div class="template-page__items">
+                <p class="template-page__notactive-lang">हिंदी</p>
+            </div>
+            <div class="template-page__items">
+                <p class="template-page__notactive-lang">తెలుగు</p>
+            </div>
+            <div class="stemplate-page__items">
+                <p class="template-page__notactive-lang">தமிழ்</p>
+            </div>
+        </div>
+
+        <div class="template-page__middle-wrapper">
+
+            <div class="flex">
+                <div class="template-page__img-wrapper">
+                    <img class="template-page__poster-img" src="https://aakaanksha-disney-hotstar.netlify.app/" alt="poster">
+                </div>
+                <div class="template-page__text-wrappper">
+                    <p class="template-page__movie-name">Black Panther</p>
+                    <p class="template-page__sub-title">
+                        <span class="template-page__sub-title--circle template-page__genre-1">Superhero </span>
+                        <span class="template-page__genre-2">Action</span>
+                    </p>
+                    <p class="template-page__sub-title">
+                        <span class="template-page__sub-title--circle template__page-year">2018 </span>
+                        <span>12+</span>
+                    </p>
+                </div>
+            </div>
+
+            <p class="template-page__movie-desc">
+                T'Challa, heir to the hidden kingdom of Wakanda, must lead his people into a new future an... more
+            </p>
+
+            <p class="template-page__starring">
+
+            </p>
+
+            <div class="template-page__btn-wrapper mt-1">
+                <a href="#" class="template-page__btn">
+                    <i class="ri-download-cloud-fill"></i>
+                    <span>Download</span>
+                </a>
+                <a href="#" class="template-page__btn">
+                    <i class="ri-add-fill"></i>
+                    <span>Watchlist</span>
+                </a>
+                <a href="#" class="template-page__btn">
+                    <i class="ri-share-forward-fill"></i>
+                    <span>Share</span>
+                </a>
+            </div>
+
+            <div class="template-page__trailer-and-extra mt-1">
+
+                <div class="slider__6 slider__wrapper">
+
+                    <div class="slider__top-wrapper">
+                        <h1 class="slider__heading mb-1">Trailer & Extras</h1>
+                    </div>
+
+                    <div class="slider">
+                        <div class="slider__items  template-page__trailer-slider">
+
+                            <div class="slider__img-wrapper">
+                                <img class="slider__img" src="https://aakaanksha-disney-hotstar.netlify.app/" alt="">
+                                <div class="slider__4__overlay"></div>
+                            </div>
+
+                            <div class="template-page__trailer-bottom-text">
+
+                                <div class="flex-between">
+                                    <div class="flex-align">
+                                        <span><i class="ri-play-fill"></i></span>
+                                        <div class="template-page__bottom-text">
+                                            <span class="template-page__movie-name template-page__Trailer-name">Black
+                                                Panther </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="slider__3 slider__wrapper">
+                <div class="slider__top-wrapper">
+                    <h1 class="slider__heading mb-1">More Like This</h1>
+                    <i class="ri-arrow-right-s-line slider__btn-spand"></i>
+
+                </div>
+
+                <div class="slider">
+                    <div class="slider__items slider__items--3" onclick="openTemplate('Popular Movies', 3, true)">
+                        <img class="slider__img" src="https://aakaanksha-disney-hotstar.netlify.app/images/home/PopularMovies/frozen.webp" alt="more like this">
+                    </div>
+                    <div class="slider__items slider__items--3" onclick="openTemplate('Popular Movies', 19, true)">
+                        <img class="slider__img" src="https://aakaanksha-disney-hotstar.netlify.app/images/home/PopularMovies/snamre.webp" alt="more like this">
+                    </div>
+                    <div class="slider__items slider__items--3" onclick="openTemplate('Popular Movies', 0, true)">
+                        <img class="slider__img" src="https://aakaanksha-disney-hotstar.netlify.app/images/home/PopularMovies/Black-Panther.webp"
+                            alt="more like this">
+                    </div>
+                    <div class="slider__items slider__items--3" onclick="openTemplate('Popular Shows', 1, true)">
+                        <img class="slider__img" src="https://aakaanksha-disney-hotstar.netlify.app/images/home/PopularShows/sofia.webp" alt="more like this">
+                    </div>
+                    <div class="slider__items slider__items--3" onclick="openTemplate('Popular Shows', 4, true)">
+                        <img class="slider__img" src="https://aakaanksha-disney-hotstar.netlify.app/images/home/PopularShows/hostage.webp" alt="more like this">
+                    </div>
+                    <div class="slider__items slider__items--3" onclick="openTemplate('Popular Movies', 17, true)">
+                        <img class="slider__img" src="https://aakaanksha-disney-hotstar.netlify.app/images/home/PopularMovies/the-past.webp" alt="more like this">
+                    </div>
+                    <div class="slider__items slider__items--3" onclick="openTemplate('Popular Movies', 4, true)">
+                        <img class="slider__img" src="https://aakaanksha-disney-hotstar.netlify.app/images/home/PopularMovies/girlfriend.webp" alt="more like this">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+    <!-- End of template page -->
+
+    <!-- Channel/Language/Genres Page -->
+    <section class="channel-lang-page page--down--close">
+
+        <div class="channel-lang-page__top flex-align flex-between">
+
+            <div>
+                <div class="flex-align">
+                    <div class="channel-lang-page__btn-back" onclick="closePage(5)">
+                        <i class="ri-arrow-left-line"></i>
+                    </div>
+                    <div class="channel-lang-page__title">Channels</div>
+                </div>
+            </div>
+
+            <div class="navigation__search">
+                <i class="ri-search-line"></i>
+            </div>
+
+        </div>
+
+        <div class="channel-lang-page__main-container">
+            <!-- Injecting Data From JavaScript -->
+        </div>
+
+    </section>
+    
+    <!-- Common backdrop -->
+    <div class="backdrop"></div>
+
+</body>
+
+</html>
